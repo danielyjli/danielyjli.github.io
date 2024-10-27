@@ -12,7 +12,7 @@
   --orange-light: hsl(14, 100%, 70%);
   
   --title-color: var(--orange);
-  --text-color: var(--white);
+  --text-color: var(--black);
   --body-color: var(--white);
   --container-color: var(--orange-light);
 
