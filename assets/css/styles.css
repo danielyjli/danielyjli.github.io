@@ -4,17 +4,18 @@
 /*=============== VARIABLES CSS ===============*/
 :root {
   --header-height: 3.5rem;
-  
+
   /*========== Colors ==========*/
-  --black: hsl(0, 0%, 10%);
-  --white: hsl(0, 0%, 100%);
-  --orange: hsl(14, 100%, 50%);
-  --orange-light: hsl(14, 100%, 70%);
-  
-  --title-color: var(--orange);
-  --text-color: var(--balck);
-  --body-color: var(--balck);
-  --container-color: var(--orange-light);
+--black: hsl(0, 0%, 10%);
+--white: hsl(0, 0%, 100%);
+--orange: hsl(14, 100%, 50%);
+--orange-light: hsl(14, 100%, 70%);
+
+--title-color: var(--orange);
+--text-color: var(--black); /* 修正为黑色作为文字颜色 */
+--body-color: var(--white); /* 修正为白色作为背景颜色 */
+--container-color: var(--orange-light);
+
 
   /*========== Font and typography ==========*/
   --body-font: "Syne", sans-serif;
