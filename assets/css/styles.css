@@ -153,7 +153,7 @@ img {
 }
 /*===============Logo ===============*/
   .logo {
-    width: 20px;/* 根据需要调整宽度 */
+    width: 200px;/* 根据需要调整宽度 */
     height: auto; /* 保持比例 */
     margin-right: 10px; /* 与文本之间的间距 */
     vertical-align: middle; /* 垂直对齐 */
