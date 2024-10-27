@@ -4,32 +4,19 @@
 /*=============== VARIABLES CSS ===============*/
 :root {
   --header-height: 3.5rem;
+  
   /*========== Colors ==========*/
-  /*Color mode HSL(hue, saturation, lightness)*/
-  /* 
-        Change favorite color
-        Default: hsl(230, 55%, 55%)
-        Purple: hsl(245, 55%, 55%) - Blue: hsl(210, 55%, 55%)
-        Pink: hsl(340, 55%, 55%) - Green: hsl(162, 55%, 55%)
-        Orange: hsl(14, 55%, 55%)
-
-        For more colors visit: https://colors.dopely.top/color-pedia
-        -> Choose any color 
-        -> Click on tab (Color Conversion)
-        -> Copy the color mode (HSL)
-  */
-  --hue: 230;
-  --first-color: hsl(var(--hue), 55%, 55%);
-  --first-color-light: hsl(var(--hue), 55%, 65%);
-  --first-color-alt: hsl(var(--hue), 50%, 50%);
-  --title-color: hsl(var(--hue), 30%, 95%);
-  --text-color: hsl(var(--hue), 20%, 80%);
-  --text-color-light: hsl(var(--hue), 20%, 70%);
-  --body-color: hsl(var(--hue), 40%, 16%);
-  --container-color: hsl(var(--hue), 40%, 20%);
+  --black: hsl(0, 0%, 10%);
+  --white: hsl(0, 0%, 100%);
+  --orange: hsl(14, 100%, 50%);
+  --orange-light: hsl(14, 100%, 70%);
+  
+  --title-color: var(--white);
+  --text-color: var(--black);
+  --body-color: var(--black);
+  --container-color: var(--orange-light);
 
   /*========== Font and typography ==========*/
-  /*.5rem = 8px | 1rem = 16px ...*/
   --body-font: "Syne", sans-serif;
   --biggest-font-size: 3rem;
   --big-font-size: 1.5rem;
@@ -43,10 +30,6 @@
   --font-regular: 400;
   --font-semi-bold: 600;
   --font-bold: 700;
-
-  /*========== z index ==========*/
-  --z-tooltip: 10;
-  --z-fixed: 100;
 }
 
 /*========== Responsive typography==========*/
@@ -99,7 +82,7 @@ h1, h2, h3 {
 }
 
 p {
-  line-height: 130%;
+  line-height: 1.5;
 }
 
 ul {
@@ -108,6 +91,11 @@ ul {
 
 a {
   text-decoration: none;
+  color: var(--orange);
+}
+
+a:hover {
+  color: var(--orange-light);
 }
 
 img {
@@ -119,23 +107,24 @@ img {
 /*=============== REUSABLE CSS CLASSES ===============*/
 .container {
   max-width: 1120px;
-  margin-inline: 1.5rem;
+  margin-inline: auto; /* Center align */
+  padding: 0 1rem;
 }
 
 .grid {
   display: grid;
-  gap: 1.5rem;
+  gap: 2rem; /* Increased gap for better spacing */
 }
 
 .section {
-  padding-block: 5rem 2rem;
+  padding: 5rem 1.5rem; /* Adjusted padding */
 }
 
 .section__title {
   text-align: center;
   font-size: var(--h1-font-size);
   font-weight: var(--font-bold);
-  margin-bottom: 2rem;
+  margin-bottom: 2.5rem; /* Increased margin for spacing */
 }
 
 .main {
@@ -143,66 +132,21 @@ img {
 }
 
 /*=============== HEADER & NAV ===============*/
+.header {
+  background-color: var(--black);
+  padding: 1rem;
+}
 
-/* Navigation for mobile devices */
-
-
-/* Show menu */
-
-
-/* Add blur header */
-
-
-/* Active link */
-
-
-/*=============== HOME ===============*/
-
-
-/* Animate scroll icon */
-
-
-/*=============== BUTTON ===============*/
-
-
-/*=============== WORKS ===============*/
-
-
-/*=============== INFO ===============*/
-
-
-/* ABOUT */
-
-
-/* EXPERIENCE */
-
-
-/* SKILLS */
-
-
-/*=============== SERVICES ===============*/
-
-
-/*=============== CONTACT ===============*/
-
+.header nav ul {
+  display: flex;
+  justify-content: center;
+  gap: 2rem; /* Space between nav items */
+}
 
 /*=============== FOOTER ===============*/
-
-
-/*=============== SCROLL BAR ===============*/
-
-
-/*=============== SCROLL UP ===============*/
-
-
-/* Show Scroll Up */
-
-
-/*=============== BREAKPOINTS ===============*/
-/* For small devices */
-
-
-/* For medium devices */
-
-
-/* For large devices */
+.footer {
+  text-align: center;
+  padding: 2rem 0;
+  background-color: var(--black);
+  color: var(--white);
+}
