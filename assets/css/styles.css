@@ -11,9 +11,9 @@
   --orange: hsl(14, 100%, 50%);
   --orange-light: hsl(14, 100%, 70%);
   
-  --title-color: var(--white);
-  --text-color: var(--black);
-  --body-color: var(--black);
+  --title-color: var(--orange);
+  --text-color: var(--white);
+  --body-color: var(--white);
   --container-color: var(--orange-light);
 
   /*========== Font and typography ==========*/
@@ -149,4 +149,10 @@ img {
   padding: 2rem 0;
   background-color: var(--black);
   color: var(--white);
+/*===============Logo ===============*/
+  .logo {
+    width: 40px; /* 根据需要调整宽度 */
+    height: auto; /* 保持比例 */
+    margin-right: 10px; /* 与文本之间的间距 */
+    vertical-align: middle; /* 垂直对齐 */
 }
