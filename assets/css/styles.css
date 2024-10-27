@@ -150,6 +150,7 @@ img {
   padding: 2rem 0;
   background-color: var(--black);
   color: var(--white);
+}
 /*===============Logo ===============*/
   .logo {
     width: 10px; /* 根据需要调整宽度 */
