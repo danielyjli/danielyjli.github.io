@@ -8,7 +8,7 @@
   /*========== Colors ==========*/
 --black: hsl(0, 0%, 10%);
 --white: hsl(0, 0%, 100%);
---orange: hsl(20, 95%, 45%);
+--orange: hsl(10, 95%, 55%);
 --orange-light: hsl(14, 100%, 70%);
 
 --title-color: var(--orange);
