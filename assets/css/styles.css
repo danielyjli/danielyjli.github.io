@@ -20,9 +20,9 @@
   /*.5rem = 8px | 1rem = 16px ...*/
 
   --body-font: "Syne", sans-serif;
-  --biggest-font-size: 4rem;
+  --biggest-font-size: 3rem;
   --big-font-size:2rem;
-  --h1-font-size: 1.5rem;
+  --h1-font-size: 1.75rem;
   --h2-font-size: 1.5rem;
   --h3-font-size: 1rem;
   --normal-font-size: .938rem;
@@ -41,7 +41,7 @@
 
 @media screen and (min-width: 1150px) {
   :root {
-    --biggest-font-size: 5.5rem;
+    --biggest-font-size: 4rem;
     --big-font-size: 3rem;
     --h1-font-size: 2.75rem;
     --h2-font-size: 2.5rem;
@@ -166,9 +166,9 @@ img {
   align-items:center;
 }
 .nav__lick{
-  width:3rem;
-  height:3rem;
-  background-color:--black;
+  width:4rem;
+  height:4rem;
+  background-color:hsla(0,0%,90%,0.2);
   color(--white);
   font-size:2rem;
   border-radius:50%;
@@ -199,40 +199,48 @@ img {
 /*=========== PERFIL ============*/
 .perfil{
     position: relative;
-    background : hsl(0, 0%, 80%,.7);
-    height:415px;
+    background : hsl(0, 0%, 75%,0.3);
+    height:450px;
+    width: 700px;
     border-radius:2rem;
-    padding:4rem;
+    padding:3rem;
     display: grid;
     overflow: hidden;
 }
 .perfil__img {
-    width: 300px; /* 设置你想要的宽度 */
+    width: 330px; /* 设置你想要的宽度 */
     height: auto; /* 保持比例 */
     position:absolute;
-    justify-self: center;
+    justify-self: left;
+    padding:0 0 0 1.5rem ;
     align-self: flex-end;
 }
 .perfil__data{
     align-self:flex-end;
-    background-color:hsl(0,0%,10%,.1);
-    backdrop-filter:blur (16px);
+    background-color:hsl(0,0%,90%,.2);
+    backdrop-filter:blur(16px);
     -webkit-backdrop-filter:blur(16px);
+    width: 400px;
+    justify-self: right;
     padding:1.5rem 1rem;
     border-radius:1.5rem;
-    border:2px solid:hsl(0,0%,100%,.5);
+    border:3px solid hsl(0,0%,100%,.5);
 }
 .perfil__name{
-    font: var(--font-regular) var(--biggest-font-size) var (--second-font);
-    margin-buttom:1rem;
+    padding:1rem 1rem;
+
+    font: var(--font-regular) var(--h1-font-size) var(--font-semi-bold);
+
 }
 .perfil__buttons{
     display:grid;
-    colunm-gap:.5rem;
-    grid-templete-colunms:repeat(2,1fr);
+    column-gap:.5rem;
+    grid-template-columns: repeat(2,1fr);
+}
+.perfil__buttons .button{
+    padding:.8rem 0;
 
 }
-
 /*=============== FOOTER ===============*/
 .footer {
   text-align: center;
@@ -251,10 +259,16 @@ img {
 .button{
    display:inline-flex;
    justify-content:center;
-   background-color: var(--first-color);
-   color: var(--white-color);
+   background-color: var(--orange);
+   color: var(--white);
    font-weight:var(--font-semi-bold);
-   padding:1.25rem 2.5rem;
+   padding:1.25rem 2.5em;
    border-radius:4rem;
-   transition :background-color,4s;
+   transition :background-color,3s;
 }
+  .button__black{
+    background-color: var(--black);
+  }
+  .button:hover{
+      background-color: var(--orange-light );
+  }
