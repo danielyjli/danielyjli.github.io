@@ -222,6 +222,17 @@ img {
     border-radius:1.5rem;
     border:2px solid:hsl(0,0%,100%,.5);
 }
+.perfil__name{
+    font: var(--font-regular) var(--biggest-font-size) var (--second-font);
+    margin-buttom:1rem;
+}
+.perfil__buttons{
+    display:grid;
+    colunm-gap:.5rem;
+    grid-templete-colunms:repeat(2,1fr);
+
+}
+
 /*=============== FOOTER ===============*/
 .footer {
   text-align: center;
