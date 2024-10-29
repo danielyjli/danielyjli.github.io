@@ -195,10 +195,23 @@ img {
 .header nav ul li:last-child {
     margin-right: 0; /* 最后一个列表项不需要右边距 */
 }
-/*=============== Home ===============*/
+/*================== Home ==================*/
+/*=========== PERFIL ============*/
+.perfil{
+    position: relative;
+    background : hsl(0, 0%, 80%,.7);
+    height:415px;
+    border-radius:2rem;
+    padding:4rem;
+    display: grid;
+    overflow: hidden;
+}
 .perfil__img {
-    width: 400px; /* 设置你想要的宽度 */
+    width: 300px; /* 设置你想要的宽度 */
     height: auto; /* 保持比例 */
+    position:absolute;
+    justify-self: center;
+    align-self: flex-end;
 }
 /*=============== FOOTER ===============*/
 .footer {
