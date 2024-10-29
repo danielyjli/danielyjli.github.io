@@ -213,6 +213,15 @@ img {
     justify-self: center;
     align-self: flex-end;
 }
+.perfil__data{
+    align-self:flex-end;
+    background-color:hsl(0,0%,10%,.1);
+    backdrop-filter:blur (16px);
+    -webkit-backdrop-filter:blur(16px);
+    padding:1.5rem 1rem;
+    border-radius:1.5rem;
+    border:2px solid:hsl(0,0%,100%,.5);
+}
 /*=============== FOOTER ===============*/
 .footer {
   text-align: center;
