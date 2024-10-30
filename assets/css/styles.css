@@ -469,7 +469,7 @@ img {
     color: var(--white);
 }
 
-.works__card:hover .projects__img {
+.works__card:hover .works__img {
     transform: scale(1.2);
 }
 
