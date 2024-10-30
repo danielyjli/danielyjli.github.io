@@ -24,8 +24,8 @@
   --big-font-size:2rem;
   --h1-font-size: 1.75rem;
   --h2-font-size: 1.5rem;
-  --h3-font-size: 1rem;
-  --normal-font-size: .938rem;
+  --h3-font-size: 1.25rem;
+  --normal-font-size: 1rem;
   --small-font-size: .813rem;
 
   /*========== Font weight ==========*/
@@ -45,8 +45,8 @@
     --big-font-size: 3rem;
     --h1-font-size: 2.75rem;
     --h2-font-size: 2.5rem;
-    --h3-font-size: 1.25rem;
-    --normal-font-size: 1.125rem;
+    --h3-font-size: 1.5rem;
+    --normal-font-size: 1.25rem;
     --small-font-size: .875rem;
   }
 }
@@ -166,8 +166,8 @@ img {
   align-items:center;
 }
 .nav__lick{
-  width:4rem;
-  height:4rem;
+  width:3rem;
+  height:3rem;
   background-color:hsla(0,0%,90%,0.2);
   color(--white);
   font-size:2rem;
@@ -196,6 +196,13 @@ img {
     margin-right: 0; /* 最后一个列表项不需要右边距 */
 }
 /*================== Home ==================*/
+.home__container {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* 将内容分为两列 */
+    gap:10rem; /* 列间距 */
+    align-items: center; /* 垂直居中对齐 */
+     white-space: nowrap; /* 不换行 */
+}
 /*=========== PERFIL ============*/
 .perfil{
     position: relative;
@@ -217,7 +224,7 @@ img {
 }
 .perfil__data{
     align-self:flex-end;
-    background-color:hsl(0,0%,90%,.2);
+    background-color:hsl(0,0%,30%,.2);
     backdrop-filter:blur(16px);
     -webkit-backdrop-filter:blur(16px);
     width: 400px;
@@ -239,7 +246,91 @@ img {
 }
 .perfil__buttons .button{
     padding:.8rem 0;
+}
+/*================== About ==================*/
+.about {
+    background-color: var(--orange);
+    padding: 2rem 1.5rem;
+    display: grid;
+   grid-template-columns: 1fr 2fr;
+}
+.about__image{
+    padding: 2rem 1.5rem;
+    place-items:center;
+}
+.about__img{
+     width: 400px;/* 根据需要调整宽度 */
+    height: auto; /* 保持比例 */
+     display: grid;
+     place-items:center;
+}
+.about__name{
+    font-size:var(--h1-font-size);
+    color: var(--black);
+    font-weight(--font-regular)
+    margin-button:1rem;
+}
+.about__social{
+    display: flex;
+    justify-content: center;
+    column-gap:1.5rem;
+    margin-block:2rem;
+}
+.about__link{
+    width: 2.5rem;
+    height: 2.5rem;
+    background-color:var(--white);
+    color: var(--black);
+    font_size:1.5rem;
+    border-radius:50%;
+    display:grid;
+    place-items:center;
+    transition:background-color .4s,color .4s;
+}
 
+/*================== Info ==================*/
+.info{
+    background-color: var(--orange);
+    padding: 2rem 1.5rem;
+}
+
+.info__circle {
+    width: 2rem;
+    height: 2rem;
+    background-color: var(--white);
+    border-radius: 50%;
+}
+
+.info__name {
+
+    color: var(--white); /* 应该指定字体颜色 */
+}
+
+.info__data {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 0.5rem;
+}
+
+.info__image {
+    background: var(--white); /* 确保这个变量已经定义 */
+    height: 230px;
+    border-radius: 2rem;
+    display: grid;
+    margin-block: 1.5rem;
+    overflow: hidden;
+    grid-template-columns: 1fr 2fr;
+}
+.info__description{
+    padding:4rem;
+    color: var(--black);
+}
+.info__title{
+   padding:2rem;
+}
+.info.button{
+   width:100%;
 }
 /*=============== FOOTER ===============*/
 .footer {
@@ -250,10 +341,12 @@ img {
 }
 /*===============Logo ===============*/
   .logo {
-    width: 200px;/* 根据需要调整宽度 */
+    width: 400px;/* 根据需要调整宽度 */
     height: auto; /* 保持比例 */
-    margin-right: 10px; /* 与文本之间的间距 */
-    vertical-align: middle; /* 垂直对齐 */
+     display: grid;
+    margin-right: 3px; /* 与文本之间的间距 */
+    padding:0 0 0 3rem;
+    place-items:center;
 }
 /*===============BUTTON ===============*/
 .button{
@@ -264,7 +357,7 @@ img {
    font-weight:var(--font-semi-bold);
    padding:1.25rem 2.5em;
    border-radius:4rem;
-   transition :background-color,3s;
+   transition :background-color .4s;
 }
   .button__black{
     background-color: var(--black);
