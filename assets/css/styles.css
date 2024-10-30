@@ -258,6 +258,10 @@ img {
     padding: 2rem 1.5rem;
     place-items:center;
 }
+.about__info
+{
+    padding:5rem 0rem;
+}
 .about__img{
      width: 400px;/* 根据需要调整宽度 */
     height: auto; /* 保持比例 */
@@ -269,6 +273,7 @@ img {
     color: var(--black);
     font-weight(--font-regular)
     margin-button:1rem;
+    margin-block:1rem 2rem;
 }
 .about__social{
     display: flex;
@@ -277,8 +282,8 @@ img {
     margin-block:2rem;
 }
 .about__link{
-    width: 2.5rem;
-    height: 2.5rem;
+    width:3rem;
+    height:3rem;
     background-color:var(--white);
     color: var(--black);
     font_size:1.5rem;
@@ -286,6 +291,14 @@ img {
     display:grid;
     place-items:center;
     transition:background-color .4s,color .4s;
+}
+,about__link:hover{
+    background-color:var(--black);
+    color:var(--orange);
+}
+.about__note{
+    margin-block:1rem 2rem;
+    font_size:var(--small-font-size);
 }
 
 /*================== Info ==================*/
@@ -332,6 +345,134 @@ img {
 .info.button{
    width:100%;
 }
+/*================== PRODUCTS ==================*/
+.projects__container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(500px, 2fr)); /* 根据需要设置列数 */
+    gap: 5rem; /* 项目之间的间隔 */
+}
+.projects__card {
+    background-color: var(--black);
+    padding: 1.5rem; /* 添加内边距 */
+    border-radius: 2rem;
+    transition: transform 0.3s; /* 添加过渡效果 */
+}
+.projects__card:hover {
+    transform: translateY(-5px); /* 鼠标悬停时的效果 */
+}
+
+.projects__image {
+    display: block;
+    overflow: hidden;
+    border-radius: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.projects__img {
+    transition: transform .4s;
+    width: 100%; /* 确保图像宽度填满父容器 */
+    aspect-ratio: 6 / 3; /* 设置宽高比为 6:3 */
+    border-radius: inherit; /* 继承圆角样式 */
+}
+
+.projects__name {
+    font-size: var(--h3-font-size);
+    margin-bottom: .5rem;
+}
+
+.projects__description {
+    color: var(--white);
+    margin-bottom: 1.5rem;
+}
+
+.projects__button {
+    color: var(--orange);
+    display: inline-flex;
+    align-items: center;
+    column-gap: .5rem;
+    transition: color .4s;
+}
+
+.projects__button i {
+    font-size: 1.25rem;
+}
+
+.projects__button span {
+    font-weight: var(--font-medium);
+}
+
+.projects__button:hover {
+    color: var(--white);
+}
+
+.projects__card:hover .projects__img {
+    transform: scale(1.2);
+}
+
+/*================== Work ==================*/
+.works__container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 2fr)); /* 根据需要设置列数 */
+    gap: 5rem; /* 项目之间的间隔 */
+}
+.works__card {
+    background-color: var(--black);
+    padding: 1.5rem; /* 添加内边距 */
+    border-radius: 2rem;
+    transition: transform 0.3s; /* 添加过渡效果 */
+}
+.works__card:hover {
+    transform: translateY(-5px); /* 鼠标悬停时的效果 */
+}
+
+.works__image {
+    display: block;
+    overflow: hidden;
+    border-radius: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.works__img {
+    transition: transform .4s;
+    width: 100%; /* 确保图像宽度填满父容器 */
+    aspect-ratio: 16 / 9; /* 设置宽高比为 16:9 */
+    border-radius: inherit; /* 继承圆角样式 */
+}
+
+.works__name {
+    font-size: var(--h3-font-size);
+    margin-bottom: .5rem;
+}
+
+.works__description {
+    color: var(--white);
+    margin-bottom: 1.5rem;
+}
+
+.works__button {
+    color: var(--orange);
+    display: inline-flex;
+    align-items: center;
+    column-gap: .5rem;
+    transition: color .4s;
+}
+
+.works__button i {
+    font-size: 1.25rem;
+}
+
+.works__button span {
+    font-weight: var(--font-medium);
+}
+
+.works__button:hover {
+    color: var(--white);
+}
+
+.works__card:hover .projects__img {
+    transform: scale(1.2);
+}
+
 /*=============== FOOTER ===============*/
 .footer {
   text-align: center;
@@ -362,6 +503,13 @@ img {
   .button__black{
     background-color: var(--black);
   }
+  .button__about{
+    background-color: var(--black);
+    display:grid;
+    place-items:center;
+
+
+}
   .button:hover{
       background-color: var(--orange-light );
   }
