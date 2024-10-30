@@ -70,9 +70,13 @@
     </main>
     <!--==================== HOME ====================-->
         <section class="home section" id="home">
-            <h2>Welcome to My Personal Website </h2>
-            <p>In which shows my CV and Portfolio</p>
+
             <div class="home__container container grid">
+                <div class="home__title">
+                     <h1>Welcome to My Personal Website </h1>
+                    <p>In which shows my CV and Portfolio</p>
+                </div>
+
                 <!--======== PERFIL =======-->
                 <div class="perfil">
                      <img src="assets/img/home-perfil.png" alt="image" class="perfil__img">
@@ -83,11 +87,35 @@
                         <a href="#info" class="button button__black">Information</a>
                           </div>
                     </div>
-
-
                 </div>
+
+
             </div>
         </section>
+  <!--==================== About ====================-->
+                 <div class="about">
+                      <div class="about__image">
+                    <img src="assets/img/about-perfil.png" alt="About Image" class="about__img">
+                      </div>
+                     <div class="about__info">
+                         <h3 class="about__name">Daniel Yujian Li-<b>Game/Media/Interaction Designer & Developer</b></h3>
+                    <p class="about__description" >Located in Shanghai, I am a design student with a wealth of experience in game design and production. </p>
+                    <div class="about__social">
+                        <a href="https://github.com/danielyjli" target="_blank" class="about__link">
+                            <i class="ri-github-line"></i>
+                        </a>
+                        <a href="https://www.instagram.com/ladykiller7777777/" target="_blank" class="about__link">
+                            <i class="ri-instagram-line"></i>
+                        </a>
+                        <a href="https://ladykiller711.itch.io/" target="_blank" class="about__link">
+                            <i class="ri-game-line"></i>
+                        </a>
+                    </div>
+                     <p class="about__note">Whenever you want to contact me, please send me an email and I will reply.</p>
+                     <a href="#contact" class="button"> Contact Me</a>
+                     </div>
+
+                 </div>
 
         <!--==================== projects ====================-->
         <section class="projects section" id="projects">
@@ -124,7 +152,8 @@
 <section class="info section" id="info">
     <div class="info">
         <h1 class="info__name">Information</h1>
-        <a href="assets/pdf/Xian-Cv.pdf" class="button button__black">Download CV</a>
+
+        <a href="assets/pdf/Tailor-Cv.pdf" download target="_black"  class="button button__black">Download CV</a>
         <div class="info__data">
             <div class="info__circle"></div>
              <h2 class="info__name">Education</h2>
@@ -132,17 +161,28 @@
 
     <div class="info__image">
           <img src="assets/img/tongji-university-logo.png" alt="Tongji University Logo" class="logo">
+        <h3 class="info__description">
+        <strong class="info__title">Tongji University：</strong>（2021/2025）
+
+            <p class="info__title">
+            Bachelor of Engineering, Industrial Design（Media and Communication Design)
+        </p>
+    </h3>
+
     </div>
-    <p class="info__description">
-        <strong>Tongji University：</strong>Bachelor of Engineering, Industrial Design（Media and Communication Design)（2021/2025）
-    </p>
+
 
     <div class="info__image">
           <img src="assets/img/hk-polytechnic-logo.png" alt="Tongji University Logo" class="logo">
+         <h3 class="info__description">
+        <strong class="info__title">The Hong Kong Polytechnic University：(2024 Spring)</strong>
+
+             <p class="info__title">
+                 Exchange Student, Interactive Media
+             </p>
+    </h3>
     </div>
-    <p class="info__description">
-        <strong>The Hong Kong Polytechnic University：</strong>Exchange Student, Interactive Media(2024 Spring)
-    </p>
+
 
     <div class="info__data">
             <div class="info__circle"></div>
@@ -150,27 +190,33 @@
     </div>
     <div class="info__image">
         <img src="assets/img/metek-logo.png" alt="Metek Game Logo" class="logo">
+        <h3 class="info__description">
+        <strong class="info__title">Metek Game：&emsp;Game Designer Intern</strong> -（2024.4-2024.6）
+
+            <p class="info__title">Responsible for the writing of the new system plan of the game under development, and the interactive update of the online system.</p>
+    </h3>
     </div>
-    <p class="info__description">
-        <strong>Metek Game：&emsp;Game Designer Intern</strong> -（2024.4-2024.6） Responsible for the writing of the new system plan of the game under development, and the interactive update of the online system.
-    </p>
+
 
     <div class="info__image">
         <img src="assets/img/tencent-logo.png" alt="Tencent Logo" class="logo">
+        <h3 class="info__description">
+        <strong class="info__title">Tencent：&emsp;&emsp;&emsp;&emsp;Battle Designer Intern</strong> -（2024.7 until now）
+
+            <p class="info__title">Responsible for the design and production of dungeon mechanics (MonsterAI, Skill, Level) for content updates in the game Moonlight Blade.</p>
+    </h3>
     </div>
-    <p class="info__description">
-        <strong>Tencent：&emsp;&emsp;&emsp;Battle Designer Intern</strong> -（2024.7 until now） Responsible for the design and production of dungeon mechanics (MonsterAI, Skill, Level) for content updates in the game Moonlight Blade.
-    </p>
+
 
     </div>
 
 
 </section>
 
-        
 
-        
-        <!--==================== CONTACT ====================-->
+
+
+    <!--==================== CONTACT ====================-->
         <section class="contact section" id="contact">
             <h2>Contact Me</h2>
             <p>E-mail：3110623050@qq.com/dannyli7676@gmail.com</p>
@@ -183,7 +229,7 @@
     </footer>
 
     <!--========== SCROLL UP ==========-->
-    
+
     <!--=============== SCROLLREVEAL ===============-->
     <script src=""></script>
 
