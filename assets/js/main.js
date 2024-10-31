@@ -1,5 +1,12 @@
 /*=============== SHOW MENU ===============*/
 
+    const navToggle = document.getElementById('nav-toggle');
+    const navList = document.querySelector('.nav-list');
+
+    navToggle.addEventListener('click', () => {
+        navList.classList.toggle('active');
+    });
+
 
 /*=============== REMOVE MENU MOBILE ===============*/
 
