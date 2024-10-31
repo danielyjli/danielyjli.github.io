@@ -218,14 +218,15 @@ img {
 }
 /* 在小屏幕下显示汉堡图标 */
 @media (max-width: 768px) {
-    .nav-list {
+      .nav-list {
         display: none; /* 默认隐藏导航列表 */
         flex-direction: column; /* 汉堡模式下竖排 */
         position: absolute; /* 绝对定位 */
         top: 50px; /* 距离顶部 */
         right: 0;
-        background-color: var(--orange); /* 菜单背景 */
+        background-color: hsl(0,0%,0%,.9); /* 菜单背景 */
         width: 100%; /* 全宽 */
+        z-index: 2; /* 确保图像在最上层 */
     }
 
     .nav-list.active {
