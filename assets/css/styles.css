@@ -89,10 +89,12 @@ h1, h2, h3 {
 }
 h1 {
     font-size: var(--h1-font-size);
+      margin-bottom: 1rem;
 }
 
 h2 {
     font-size: var(--h2-font-size);
+
 }
 p {
   line-height: 1.5;
@@ -186,32 +188,91 @@ img {
 
 /*=============== HEADER & NAV ===============*/
 .header {
-  background-color: var(--black);
-  padding: 1rem;
+    background-color: var(--black); /* Header 背景颜色 */
+    padding: 1rem; /* 内边距 */
+    position: relative; /* 以便于绝对定位 */
 }
-.header nav ul {
-  display: flex;
-  justify-content: center;
-  gap: 2rem; /* Space between nav items */
-  padding: 0; /* 去除默认内边距 */
+
+.nav-toggle {
+    cursor: pointer; /* 鼠标指针变为手型 */
+    display: none; /* 默认隐藏 */
 }
-.header nav ul li {
-    display: inline; /* 使列表项在一行内显示 */
-    margin-right: 8rem; /* 调整列表项之间的间隔 */
-    font-size: 1.5rem;
+
+.nav-toggle span {
+    display: block; /* 每个线条作为块元素 */
+    width: 30px; /* 线条宽度 */
+    height: 3px; /* 线条高度 */
+    background-color: var(--orange); /* 线条颜色 */
+    margin: 5px 0; /* 上下间距 */
+    transition: all 0.3s; /* 动画效果 */
+}
+.nav-list {
+    display: flex; /* 默认横排 */
+    justify-content: space-between; /* 项目之间均匀分配空间 */
+    padding:  0 3rem; /* 增加上下间距 */
+}
+/* 导航链接样式 */
+.nav-list li {
+    text-align: center; /* 居中 */
+    padding: 1rem 0; /* 增加上下间距 */
+}
+/* 在小屏幕下显示汉堡图标 */
+@media (max-width: 768px) {
+    .nav-list {
+        display: none; /* 默认隐藏导航列表 */
+        flex-direction: column; /* 汉堡模式下竖排 */
+        position: absolute; /* 绝对定位 */
+        top: 50px; /* 距离顶部 */
+        right: 0;
+        background-color: var(--orange); /* 菜单背景 */
+        width: 100%; /* 全宽 */
     }
-.header nav ul li:last-child {
-    margin-right: 0; /* 最后一个列表项不需要右边距 */
+
+    .nav-list.active {
+        display: flex; /* 展开时显示 */
+    }
+
+    .nav-toggle {
+        display: block; /* 显示汉堡图标 */
+    }
+
+}
+.nav-list a {
+    text-decoration: none; /* 去掉下划线 */
+    color: var(--orange); /* 文字颜色 */
+    font-size: 1.25rem; /* 字体大小 */
+}
+
+.nav-list a:hover {
+    color: var(--orange-light); /* 悬停时颜色变化 */
 }
 /*================== Home ==================*/
 .home__container {
     display: grid;
-    grid-template-columns: 1fr 1fr; /* 将内容分为两列 */
-    gap:10rem; /* 列间距 */
-    align-items: center; /* 垂直居中对齐 */
-     white-space: nowrap; /* 不换行 */
+    grid-template-columns: 1fr 1fr; /* 两列布局 */
+    gap: 10rem; /* 列间距 */
+    align-items: center; /* 垂直居中 */
+    white-space: normal; /* 允许换行 */
+     padding: 2rem;
 }
-/*=========== PERFIL ============*/
+
+@media (max-width: 768px) {
+    .home__container {
+        grid-template-columns: 1fr; /* 小屏幕时变为一列 */
+        gap: 2rem; /* 调整间距 */
+
+    }
+
+    .perfil {
+        width: 100%; /* 使 perfil 适应屏幕宽度 */
+        padding: 1.5rem; /* 调整内边距 */
+    }
+
+    .perfil__data {
+        width: auto; /* 让数据区域自适应 */
+    }
+}
+ <!--======== PERFIL =======-->
 .perfil{
     position: relative;
     background : hsl(0, 0%, 75%,0.3);
@@ -221,6 +282,7 @@ img {
     padding:3rem;
     display: grid;
     overflow: hidden;
+
 }
 .perfil__img {
     width: 330px; /* 设置你想要的宽度 */
@@ -229,6 +291,7 @@ img {
     justify-self: left;
     padding:0 0 0 1.5rem ;
     align-self: flex-end;
+    transform: translate(-50%,-30%);
 }
 .perfil__data{
     align-self:flex-end;
@@ -241,20 +304,25 @@ img {
     border-radius:1.5rem;
     border:3px solid hsl(0,0%,100%,.5);
 }
-.perfil__name{
-    padding:1rem 1rem;
 
+
+
+
+.perfil__name {
+    padding: 1rem 1rem;
     font: var(--font-regular) var(--h1-font-size) var(--font-semi-bold);
+}
 
+.perfil__buttons {
+    display: grid;
+    column-gap: .5rem;
+    grid-template-columns: repeat(2, 1fr);
 }
-.perfil__buttons{
-    display:grid;
-    column-gap:.5rem;
-    grid-template-columns: repeat(2,1fr);
+
+.perfil__buttons .button {
+    padding: .8rem 0;
 }
-.perfil__buttons .button{
-    padding:.8rem 0;
-}
+
 /*================== About ==================*/
 .about {
     background-color: var(--orange);
@@ -335,13 +403,15 @@ img {
 }
 
 .info__image {
-    background: var(--white); /* 确保这个变量已经定义 */
-    height: 230px;
+      background: var(--white); /* 确保这个变量已经定义 */
+    height:280px;
     border-radius: 2rem;
     display: grid;
     margin-block: 1.5rem;
+    grid-template-columns: auto 1fr; /* 图像自适应宽度，文本占剩余空间 */
+    align-items: center; /* 垂直居中对齐 */
     overflow: hidden;
-    grid-template-columns: 1fr 2fr;
+    padding: 1rem; /* 内边距，增加视觉效果 */
 }
 .info__description{
     padding:4rem;
@@ -352,6 +422,37 @@ img {
 }
 .info.button{
    width:100%;
+}
+@media (max-width: 768px) {
+    .info__image {
+    height: 430px;
+    padding: 0rem;
+    grid-template-columns: 1fr;
+    }
+    .info__description{
+    padding:0 0 2rem 3rem;
+    color: var(--black);
+    margin-bottom:3rem;
+    }
+}
+/*===============Logo ===============*/
+  .logo {
+    width: 400px;/* 根据需要调整宽度 */
+    height: auto; /* 保持比例 */
+     display: grid;
+    margin-right: 3px; /* 与文本之间的间距 */
+    padding:0 0 3 0rem;
+    place-items:center;
+    margin-bottom:0rem;
+}
+@media (max-width: 768px) {
+ .logo {
+    width: 400x;/* 根据需要调整宽度 */
+     margin-right: 1px;
+     padding:0 0 0 1rem;
+
+ }
+
 }
 /*================== PRODUCTS ==================*/
 .projects__container {
@@ -488,15 +589,7 @@ img {
   background-color: var(--black);
   color: var(--white);
 }
-/*===============Logo ===============*/
-  .logo {
-    width: 400px;/* 根据需要调整宽度 */
-    height: auto; /* 保持比例 */
-     display: grid;
-    margin-right: 3px; /* 与文本之间的间距 */
-    padding:0 0 0 3rem;
-    place-items:center;
-}
+
 /*===============BUTTON ===============*/
 .button{
    display:inline-flex;
@@ -507,9 +600,11 @@ img {
    padding:1.25rem 2.5em;
    border-radius:4rem;
    transition :background-color .4s;
+    margin-bottom: 1rem;
 }
   .button__black{
     background-color: var(--black);
+
   }
   .button__about{
     background-color: var(--black);
