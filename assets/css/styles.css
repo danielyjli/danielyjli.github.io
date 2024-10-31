@@ -176,6 +176,11 @@ img {
   place-items:center;
   transition:background-color .6s;
 }
+
+/*active link*/
+background-color:var (--orange);
+
+
 /*=============== HEADER & NAV ===============*/
 .header {
   background-color: var(--black);
