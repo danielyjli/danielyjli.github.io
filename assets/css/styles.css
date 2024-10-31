@@ -518,3 +518,19 @@ background-color:var (--orange-light);
   .button:hover{
       background-color: var(--orange-light );
   }
+/*===============scroll bar===============*/
+::-webkit-scrollbar{
+     width:.6rem;
+     background-color:hsl (0,0%,20%);
+     border-radius:.5rem;
+}
+::-webkit-scrollbar.thumb{
+     
+     background-color:hsl (0,0%,30%);
+     border-radius:.5rem;
+}
+::-webkit-scrollbar.thumb:hover{
+     
+     background-color:hsl (0,0%,40%);
+     
+}
