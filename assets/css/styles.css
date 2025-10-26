@@ -288,11 +288,11 @@ img {
 .perfil__img {
     width: 330px; /* 设置你想要的宽度 */
     height: auto; /* 保持比例 */
-    position:absolute;
+    position: absolute;
     justify-self: left;
     padding:0 0 0 1.5rem ;
     align-self: flex-end;
-    transform: translate(-50%,-30%);
+    transform: translate(-60%, 75%);
 }
 .perfil__data{
     align-self:flex-end;
@@ -405,14 +405,14 @@ img {
 
 .info__image {
       background: var(--white); /* 确保这个变量已经定义 */
-    height:280px;
+    height:300px;
     border-radius: 2rem;
     display: grid;
     margin-block: 1.5rem;
     grid-template-columns: auto 1fr; /* 图像自适应宽度，文本占剩余空间 */
     align-items: center; /* 垂直居中对齐 */
     overflow: hidden;
-    padding: 1rem; /* 内边距，增加视觉效果 */
+    padding: 0rem; /* 内边距，增加视觉效果 */
 }
 .info__description{
     padding:4rem;
@@ -426,7 +426,7 @@ img {
 }
 @media (max-width: 768px) {
     .info__image {
-    height: 430px;
+    height: 530px;
     padding: 0rem;
     grid-template-columns: 1fr;
     }
